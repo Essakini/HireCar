@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Check out Peugeot Van </title>
+<link href="../style/project style.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="../JavaS/Check.js"></script>
+
+</head>
+<body style="background-color:white;" onload="Peugeot()">
+
+
+
+<div class="vehicleContainer"> 
+		<div class="vehicleInformation" style="width:95%; margin-right:0px;" id="PeugeotVanName"></div>
+		<div class="vehicleInformation" id="PeugeotVanPrice"></div>
+		<div class="vehicleInformation" id="PeugeotVanseats"> </div>
+		<div class="vehicleInformation" id="PeugeotVanAge"></div>
+		
+		<div class="vehicleImage" id = "WPeugeot"><img src="../images/Peugeot.jpg" alt="van" style="width: 350px; height: 150px;"> </div>
+		
+		<div class="vehicleArrow">
+		<input type="button" id="PeugeotPrevious" value="<" > 
+		<input type="button"  id="PeugeotNext" value=">" > 
+		</div>
+</div>
+
+<div class="vehicleContainer" id="customer details" style="height:auto;"> 
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+		<form id="form1" >
+			Name: <input name="Cname" type="text" size="20" required>
+		</form>
+	</div>
+		
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+		<form id="form2">
+			Surname: <input name="Csurname" type="text" size="20" required >
+		</form>
+	</div>
+
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+		<form id="form3">
+			Age: <input name="Cage" type="number" size="20" required>
+		</form>
+	</div>
+
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+		<form id="form4">
+			Full Adress: <input name="Caddress" type="text" size="20" required>
+		</form>
+	</div>
+
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+		<form id="form5">
+			Phone Number: <input name="Cphone" type="number" size="20" required>
+		</form>
+	</div>
+	
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+			<form id="Hdays">
+			Days of hiring: <input name="days" type="number" size="20" min=1 required>
+			</form>
+	</div>
+	
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+		<p id="error"> </p>
+	</div>
+	
+	<div class="vehicleInformation" style="width:95%; margin-right:0px;">
+		<button onclick="outputname()" type="submit">Submit</button>
+	</div>
+	
+</div>
+
+<script>
+
+function outputname() {
+	
+	var cost,prise,Iname, name, Isurname, surname, Iaddress, adress, Iage, age,  Iphone, phone; 
+	
+	
+	
+	var f1=document.getElementById("form1")
+	Iname=f1.elements["Cname"].value;
+	
+	var form2=document.getElementById("form2") ;
+	Isurname=form2.elements["Csurname"].value;
+
+	
+	var form3=document.getElementById("form3") ;
+	Iage=form3.elements["Cage"].value;
+	
+
+	
+	var form4=document.getElementById("form4") ;
+	Iaddress=form4.elements["Caddress"].value;
+	
+	
+	var form5=document.getElementById("form5") ;
+	Iphone=form5.elements["Cphone"].value;
+	
+	var hiring=document.getElementById("Hdays") ;
+	prise=hiring.elements["days"].value;
+	
+	if(Iname==""||Isurname==""||Iage==""||Iaddress==""||Iphone=="")
+		{
+			document.getElementById("error").innerHTML="Error<br>";
+		}else {
+				
+				if(Iage<20)
+				{
+					document.getElementById("error").innerHTML=Iname+" your age doesnt match the minimum criteria<br>";
+				}else 
+				{
+					if(Iphone=="" || Iphone.length!=11)
+					{
+						document.getElementById("error").innerHTML="Error, Please insert your Phone<br>";
+					}else 
+					{
+					
+					cost=prise*30;
+					document.getElementById("Phone").innerHTML="Phone: "+Iphone+"<br>";
+					document.getElementById("DOB").innerHTML="Age "+Iage+"<br>";
+					document.getElementById("N").innerHTML="Name: "+Iname+"<br>";
+					document.getElementById("Surname").innerHTML="Surname: "+Isurname+"<br>";
+					document.getElementById("Adress").innerHTML="Adress: "+Iaddress+"<br>";
+					document.getElementById("DayH").innerHTML="Days of Hiring: "+prise+"<br> <br>Total cost:£  "+cost;
+					}
+				}
+		
+				
+				
+		}
+
+}
+</script>
+
+
+<div class="vehicleContainer"> 
+		<div class="vehicleInformation" style="width:95%; margin-right:0px;" id="invoice">Invoice & customer details</div>
+		<p id="N"></p>
+		<p id="Surname"></p>
+		<p id="DOB"></p>
+		<p id="Adress"></p>
+		<p id="Phone"></p>
+		<p id="DayH"></p>
+		
+</div>
+
+</body>
+</html>

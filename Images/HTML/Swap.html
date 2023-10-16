@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <script src="../JavaS/VehicleImage.js"></script> 
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<a href="javascript:void(0)" class="moveImg" id="previous">&#60</a>
+<div id = "myimages"><img src = "mustang.png" alt = "faded reddish flower" /></div>
+<a  href="javascript:void(0)"class="moveImg" id="next" style="float:right; align:center;">&#62</a>
+
+<script>
+var images = [];
+
+images[0] = {src: 'mercedes0.png', alt: 'image 1 alt text', style:'width: 350px; height: 150px;'};
+images[1] = {src: 'mercedes1.png', alt: 'image 2 alt text', style:'width: 350px; height: 150px;'};
+images[2] = {src: 'mercedes2.png', alt: 'image 3 alt text', style:'width: 350px; height: 150px;'};
+images[3] = {src: 'alfa.png', alt: 'image 4 alt text', style:'width: 350px; height: 150px;'};
+
+var getImg = document.getElementById("myimages");
+
+var img = [];
+var i = 0;
+for(i = 0;i < 4;i++) {
+    img[i] = '<img src="' + images[i].src + '" alt="' + images[i].alt + '" style="' + images[i].style + '" />';
+}
+
+var currentIndex = 0;
+var goForward = function () {
+    /*console.log('here' + currentIndex);*/
+    if(currentIndex >= 0 && currentIndex < 3) {
+        currentIndex++;
+        getImg.innerHTML = img[currentIndex];
+    }
+};
+
+var goBackward = function () {
+    /*console.log('here' + currentIndex);*/
+    if(currentIndex > 0){
+        currentIndex--;
+        getImg.innerHTML = img[currentIndex];
+    }
+};
+
+document.getElementById('previous').onclick = goBackward;
+document.getElementById('next').onclick = goForward;
+</script>
+
+</body>
+</html>
+
+
+<div class="vehicleInformation" style="width:100%; text-align:center; margin:0px;">
+			<a href="javascript:void(0)" class="moveImg" id="previous" style="align:center;">"<"</a>
+			<a href="javascript:void(0)"class="moveImg" id="next" style="align:center;">">"</a>
+		</div>
+		

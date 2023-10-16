@@ -1,0 +1,224 @@
+body{
+     margin: 0;
+     padding: 0;
+	 background-color:black;
+    }
+
+Head{
+	 position:fixed; margin:0px; width:100%; 
+}
+
+h1{
+			width:100%;
+            font-family: italic;
+            font-size: 50px;
+            color:white;
+			margin:auto;
+            text-align: center;
+			background-color:black;
+        }
+
+h2{
+		font-family: arial;
+        font-size: 25px; 
+		color:white;
+		margin-bottom:0px;
+        margin-top:0px;
+        text-align: center;
+		background-color:maroon;
+	}
+
+h4{
+		font-family: italic;
+        font-size: 20px; 
+		color:gold;
+        text-align:center;
+		margin:0px;
+		padding-bottom:10px;
+		background-color:black;
+	}
+
+.footer {
+   
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   margin:0px;
+   padding:0px;
+   background-color: white;
+   color: black;
+   text-align: center;
+   position:relative;
+}
+	
+.wrapperE{
+		
+		width: width:100%;
+		background-color:rgba(238, 238, 238, 0.60);
+		padding-bottom:30px;
+		
+}
+
+.wrapper{
+		width: 960px ;
+		margin: 0 auto;
+}
+
+/* START Navigation Bar*/
+[class*="col-"]{
+				
+}
+.col ul {list-style:none;  margin:0; padding:0;  }
+.col li {float:left; width:100px; background-color:rgba(238, 238, 238, 0.60); text-align:center;
+         border-right:1px solid white; position:relative;
+         height:30px; line-height:30px;}
+.col li ul li {float:left; width:150px; text-align:left; padding-left:0px;
+         border-top:1px solid white;}
+.col a {text-decoration:none; color:black;}
+.col li ul {position:absolute; top:30px; left:0; visibility:hidden;}
+.col li:hover ul {visibility:visible;}
+.col li:hover {background-color:navajowhite;}
+/* END Navigation Bar*/
+
+.boxP{
+		width:100%; 
+		background-color:rgba(238, 238, 238, 0.93); 
+		text-align:center; 
+		float: left;  
+		z-index:center; 
+		clear: both;
+		height:25vh; 
+		padding-bottom:20px;
+		margin-top:20px; 
+		
+}
+
+.boxH{
+		width:200px; 
+		background-color:rgba(238, 238, 238, 0.93); 
+		text-align:center; 
+		float: right;
+		clear:;
+		margin:0px;
+		margin-left:40px;
+		border-radius: 25px;
+		margin-bottom:100px;
+		position:relative;
+		
+}
+
+.boxHM{
+		width:100%; 
+		background-color:navajowhite;  
+		clear:both;
+		float: left;
+		margin:0px;
+		padding:0px;
+		position:relative;
+		
+}
+
+
+.boxL{
+		width:150px;
+		height:65px;
+		background-color:rgba(238, 238, 238, 0.93);
+		border-radius: 25px;
+		float: left;
+		padding-left: 15px;	
+}
+.boxR{
+		width:150px;
+		height:65px;
+		background-color:rgba(238, 238, 238, 0.93);
+		border-radius: 25px;
+		float: right;
+		padding-right: 15px;
+		Position:relative;
+}
+
+
+.vehicleContainer{
+	
+	width:350px;
+	height:360px;
+	margin-left:70px;
+    margin-right:15px;
+    border-radius: 25px;
+	margin-top:20px;
+	margin-bottom: 50px;
+	background-color:navajowhite; 
+	display:inline-block;
+	position:relative;
+	float:left;
+	border:3px solid black;
+	
+}
+.vehicleImage{
+		width: 350px;
+		height: 150px;
+		margin:auto;
+		display:inline-block;
+		background-color:rgba(238, 238, 238, 0.93); 
+}
+
+.vehicleInformation {
+		width: 100px;
+		height:50px;
+		display:inline-block;
+		float: left;
+		margin-left:10px;
+		margin-right:5px;
+		margin-bottom: 10px;
+		text-align: center;
+		color: black;
+		border-radius: 25px;
+		background-color: white;
+		
+}
+
+.vehicleArrow{
+		width:350px;
+		height:auto;
+		text-align: center;
+		margin:0px;
+		margin-bottom: 5px;
+		padding:0px;
+		background-color:transparent; 
+		display:inline-block;
+}
+
+
+/* Index BACKGROUND IMAGE*/
+.box1{
+        height: 100vh;
+        width: 100%;
+		padding-bottom:100px;
+		background-color:white;
+        /*background-image: url(cars2.png);*/
+        background-size: cover;
+        display: table;
+        background-attachment: fixed;
+        }
+/* 1ST BACKGROUND IMAGE*/
+.box2{
+        height: 100vh;
+        width: 100%;
+		background-color:white;
+        background-size: cover;
+        display: table;
+        background-attachment: fixed;
+    }
+
+/* 2ND BACKGROUND IMAGE*/
+.box3{
+        height:100vh;
+        width: 100%;
+       /*background-image: url(van2.png);*/
+        background-size: cover;
+        display: table;
+        background-attachment: fixed;
+        }
+		
+		
+		
